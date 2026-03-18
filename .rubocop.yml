@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 plugins:
   - rubocop-performance
   - rubocop-rake
@@ -12,3 +14,9 @@ Style/StringLiterals:
 
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 5

@@ -1,0 +1,3 @@
+class Module
+  def const_set_p: (String | Symbol name, untyped value) -> untyped
+end

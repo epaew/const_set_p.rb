@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # D = Steep::Diagnostic
 #
 # target :lib do
@@ -27,3 +29,8 @@
 #
 #   # library "pathname"              # Standard libraries
 # end
+
+target :lib do
+  check "lib"
+  signature "sig"
+end
