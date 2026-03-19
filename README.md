@@ -1,4 +1,6 @@
 # const_set_p.rb
+[![Gem Version](https://badge.fury.io/rb/const_set_p.svg)](https://badge.fury.io/rb/const_set_p)
+[![RSpec](https://github.com/epaew/const_set_p.rb/actions/workflows/rspec.yaml/badge.svg)](https://github.com/epaew/const_set_p.rb/actions/workflows/rspec.yaml)
 
 Provides `Module#const_set_p`, which is a wrapper method for `Module#const_set`, it acts like `mkdir -p` does for `mkdir`.
 
