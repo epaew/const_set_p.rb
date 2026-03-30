@@ -2,7 +2,7 @@
 [![Gem Version](https://badge.fury.io/rb/const_set_p.svg)](https://badge.fury.io/rb/const_set_p)
 [![RSpec](https://github.com/epaew/const_set_p.rb/actions/workflows/rspec.yaml/badge.svg)](https://github.com/epaew/const_set_p.rb/actions/workflows/rspec.yaml)
 
-Provides `Module#const_set_p`, which is a wrapper method for `Module#const_set`, it acts like `mkdir -p` does for `mkdir`.
+Provides `Module#const_set_p`, a wrapper method for `Module#const_set` that acts like `mkdir -p` does for `mkdir`.
 
 ## Installation
 
@@ -32,14 +32,14 @@ module M
   const_set("C::D", Class.new)
 
   # `Module#const_set_p` automatically defines all intermediate modules.
-  # i.e. The code below defines `M::N`, `M::N::O` and `M::N::O::P`.
+  # e.g. The code below defines `M::N`, `M::N::O` and `M::N::O::P`.
   const_set_p("N::O::P", Class.new)
 
   # Respects pre-defined classes and modules.
-  # i.e. The code below does not replace the pre-defined `M::C` class.
+  # e.g. The code below does not replace the pre-defined `M::C` class.
   const_set_p("C::D", Class.new)
 
-  # Raises NameError if the specified intermediate constant is pre-defined, and is neither a Class nor a Module.
+  # Raises a `NameError` if the specified intermediate constant is already defined and is neither a Class nor a Module.
   const_set_p("S::T", Class.new)
 end
 ```
